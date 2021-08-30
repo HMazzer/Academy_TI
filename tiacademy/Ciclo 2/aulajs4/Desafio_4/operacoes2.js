@@ -24,37 +24,45 @@ window.onload=function(){
 
 	const mostraTotalCompra = document.querySelector("#mostraTotalCompra");
 
-	const armazenaItens = [];
+	var ItemFruta
+
+	var armazenaItens = [];
 
 	var totalPedido=0;
 
 	itemProduto.forEach((item)=>{
 
-			item.addEventListener('click',()=>{
-				
+		item.addEventListener('click', ()=>{
+			li = document.createElement('li');
+			li.className = 'itemFruta'; 
+			li.dataset.precos = item.dataset.precos;
+
 				if(armazenaItens.indexOf(item.textContent) == -1){
 					armazenaItens.push(item.textContent);
 
-					li = document.createElement('li');
+				"cestaDoCliente .appendChild(li).textContent=item.textContent;"
+				itemFruta = cestaDoCliente.appendChild(li);
+				itemFruta.textContent = item.textContent;
 
-					cestaDoCliente .appendChild(li).textContent=item.textContent;
+				itemFruta.addEventListener('click', (foco)=>{
+					armazenaItens.splice(armazenaItens.indexOf(foco.target.textContent),1);
+					cestaDoCliente.removeChild(foco.target);
+					totalPedido-= Number(foco.target.dataset.precos);
+					mostraTotalCompra.value = totalPedido.toLocaleString('pt-BR',
+						{style:'currency',currency:'BRL'});
+				});
 
 
 					totalPedido+=Number(item.dataset.preco); 
 
 					mostraTotalCompra.value=totalPedido.toLocaleString('pt-BR',
-						{style:'currency',
-						currency:'BRL'})
+						{style:'currency',currency:'BRL'});
 
 				}else{
-					alert(`Este item ${item.textContent} já está na sua cesta`);
+					alert(`Esta item ${item.textContent} já está na sua cesta`);
 				};
 
 
 			});
 
 	});
-
-
-
-}//fim

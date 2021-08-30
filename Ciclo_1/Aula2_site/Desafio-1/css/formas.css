@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	width: 50%;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: cyan;
+	display: flex;
+	flex-direction: column;
+}
+
+.quadrado {
+	width: 170px;
+	height: 170px;
+	border: none;
+	margin: 10px;
+	background-color: violet;
+	color: #000;
+	font-family: verdana, arial, cursive;
+	font-size: 25px;
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circulo {
+	width: 170px;
+	height: 170px;
+	border: none;
+	margin: 140px;
+	background-color: yellow;
+	border-radius: 100%;
+	color: #000;
+	font-family: verdana, arial, cursive;
+	font-size: 25px;
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 360px;
+	bottom: 0;
+}
+
+.center {
+	justify-content: right;
+	align-items: center;
+}

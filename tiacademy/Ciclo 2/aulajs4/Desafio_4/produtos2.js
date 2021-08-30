@@ -4,4 +4,4 @@ var produtos = [
 {prodDesc:"Carambola", prodPreco: 13.99},
 {prodDesc:"Lichia", prodPreco: 18.90},
 {prodDesc:"Melancia", prodPreco: 5.00},
-];
+]

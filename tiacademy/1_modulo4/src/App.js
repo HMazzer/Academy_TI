@@ -6,6 +6,7 @@ import {Home} from './pages/Home/';
 import {VisualizarCliente} from './pages/Cliente/VisualizarCliente';
 import { Menu } from './componentes/Menu';
 import { VisualizarServico } from './pages/Servico/VisualizarServico';
+import { Servico } from './pages/Servico/Servico';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route path="/visualizarcliente" component={VisualizarCliente}/>
           <Route path="/visualizarservico" component={VisualizarServico}/>
+          <Route path="/servico/:id" component={Servico}/>
         </Switch>
       </Router>
     </div>

@@ -10,6 +10,9 @@ import { Servico } from './pages/Servico/Servico';
 import { Cliente } from './pages/Cliente/Cliente';
 import { VisualizarPedido } from './pages/Pedido/VisualizarPedido';
 import { Pedido } from './pages/Pedido/Pedido';
+import { Cadastrar } from './pages/Servico/Cadastrar';
+import { Cadastrarcliente } from './pages/Cliente/Cadastrar';
+import { Cadastrarpedido } from './pages/Pedido/Cadastrar';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/visualizarcliente" component={VisualizarCliente}/>
           <Route path="/visualizarservico" component={VisualizarServico}/>
           <Route path="/visualizarpedido" component={VisualizarPedido}/>
+          <Route path="/cadastrarservico" component={Cadastrar}/>
+          <Route path="/cadastrarcliente" component={Cadastrarcliente}/>
+          <Route path="/cadastrarpedido" component={Cadastrarpedido}/>
           <Route path="/servico/:id" component={Servico}/>
           <Route path="/cliente/:id" component={Cliente}/>
           <Route path="/pedido/:id" component={Pedido}/>

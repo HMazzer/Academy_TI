@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import{Alert, Container, Table} from 'reactstrap'
+import{Alert, Container, Table} from 'reactstrap';
 import { api } from '../../../config';
 import {Link} from 'react-router-dom';
+
 export const VisualizarServico = ()=>{
 
     const [data, setData] = useState([]); /*para receber os dados*/
@@ -37,7 +38,21 @@ export const VisualizarServico = ()=>{
         <div className="p-3">
             <Container>
               {status.type === 'error' ? <Alert color="warning">{status.message}</Alert> : " "}
-                <Table striped>
+              <div>
+                <div className="d-flex">
+                <div className="mr-auto p-2">
+                     <h1>Informações do Serviço</h1>
+                 </div>
+                <div className="p-2">
+                    <Link to="/cadastrarservico"
+                    className= "btn btn-outline-primary btn-sm">
+                        Cadastrar
+                    </Link>
+                </div>
+                  </div>
+                </div> 
+
+               <Table striped>
                     <thead>
                         <tr>
                           <th>ID</th>
@@ -60,6 +75,8 @@ export const VisualizarServico = ()=>{
                           ))}
                 
                     </tbody>
+                   
+             
           </Table>
    </Container>
             

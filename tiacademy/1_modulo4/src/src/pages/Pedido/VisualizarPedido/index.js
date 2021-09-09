@@ -39,6 +39,18 @@ export const VisualizarPedido = () => {
         <div className="p-3">
             <Container>
                 {status.type==='error'? <Alert color="danger">{status.message}</Alert> : ""}
+                {status.type==='error'? <Alert color="danger">{status.message}</Alert> : ""}
+                <div className="d-flex">
+                    <div className="mr-auto p-2">
+                        <h1>Informações Cliente</h1>
+                    </div>
+                    <div className="p-2">
+                        <Link to="/cadastrarpedido"
+                            className="btn btn-outline-primary btn-sm">
+                            Cadastrar
+                        </Link>
+                    </div>
+                </div>
                 <Table striped >
                     <thead>
                         <tr>

@@ -18,6 +18,11 @@ export const Home = ()=>{
                         /*className="btn btn-primary btn-sm">Visualizar</a>---modo diferente do btn*/
                         className="btn btn-outline-primary btn-sm">Servico</a>
                     </div>
+                    <div className="p-2">
+                        <a href="/visualizarpedido" 
+                        /*className="btn btn-primary btn-sm">Visualizar</a>---modo diferente do btn*/
+                        className="btn btn-outline-primary btn-sm">Pedido</a>
+                    </div>
                 </div>        
             </Container>
         </div>
